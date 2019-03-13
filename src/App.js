@@ -1,25 +1,93 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from '@material-ui/core/Grid';
+import styled, { createGlobalStyle } from 'styled-components';
+
 
 class App extends Component {
+  state = {
+    spacing: '0',
+  }
   render() {
+    const GlobalStyle = createGlobalStyle`
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    `;
+
+    const Button = styled.button`
+      border: 1px solid black;
+      width: 100%;
+      height: 100px;
+    `
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <GlobalStyle/> 
+        <Grid container>
+          <Grid item xs={12}>
+            1
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button>3</Button>
+          </Grid>
+        </Grid>
       </div>
     );
   }
