@@ -5,9 +5,74 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 class App extends Component {
   state = {
-    spacing: '0',
+    displayNum: 0,
+    keyboards: [
+      {
+        txt: "C"
+      }, 
+      {
+        txt: "+/-"
+      },
+      {
+        txt: "%"
+      },
+      {
+        txt: "/"
+      },
+      {
+        txt: "7"
+      },
+      {
+        txt: "8"
+      },
+      {
+        txt: "9"
+      },
+      {
+        txt: "x"
+      },
+      {
+        txt: "4"
+      },
+      {
+        txt: "5"
+      },
+      {
+        txt: "6"
+      },
+      {
+        txt: "-"
+      },
+      {
+        txt: "1"
+      },
+      {
+        txt: "2"
+      },
+      {
+        txt: "3"
+      },
+      {
+        txt: "+"
+      },
+      {
+        txt: "0"
+      },
+      {
+        txt: "."
+      },
+      {
+        txt: "="
+      }
+    ]
   }
+
+  _clickNumberButton = (number) => {
+    console.log('clickNumberButton', number)
+  }
+
   render() {
+    const { displayNum, keyboards } = this.state;
     const GlobalStyle = createGlobalStyle`
       body {
         padding: 0;
@@ -21,74 +86,20 @@ class App extends Component {
       height: 100px;
     `
     return (
-      <div>
+      <React.Fragment>
         <GlobalStyle/> 
+        {displayNum}
         <Grid container>
-          <Grid item xs={12}>
-            1
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
-          <Grid item xs={3}>
-            <Button>3</Button>
-          </Grid>
+        {keyboards.map((calDom, index) => {
+          return (
+            <Grid item xs={3}>
+              <Button>{calDom.txt}/// {index}</Button>
+            </Grid>
+          )
+        })}
         </Grid>
-      </div>
+   
+      </React.Fragment>
     );
   }
 }
