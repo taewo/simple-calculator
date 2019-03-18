@@ -1,77 +1,77 @@
 export const keyboards = [{
-    txt: "C",
+    val: "C",
     type: "operator",
   },
   {
-    txt: "+/-",
+    val: "+/-",
     type: "operator",
   },
   {
-    txt: "%",
+    val: "%",
     type: "operator",
   },
   {
-    txt: "/",
+    val: "/",
     type: "operator",
   },
   {
-    txt: "7",
+    val: 7,
     type: "number",
   },
   {
-    txt: "8",
+    val: 8,
     type: "number",
   },
   {
-    txt: "9",
+    val: 9,
     type: "number",
   },
   {
-    txt: "x",
+    val: "x",
     type: "operator",
   },
   {
-    txt: "4",
+    val: 4,
     type: "number",
   },
   {
-    txt: "5",
+    val: 5,
     type: "number",
   },
   {
-    txt: "6",
+    val: 6,
     type: "number",
   },
   {
-    txt: "-",
+    val: "-",
     type: "operator",
   },
   {
-    txt: "1",
+    val: 1,
     type: "number",
   },
   {
-    txt: "2",
+    val: 2,
     type: "number",
   },
   {
-    txt: "3",
+    val: 3,
     type: "number",
   },
   {
-    txt: "+",
+    val: "+",
     type: "operator",
   },
   {
-    txt: "0",
+    val: 0,
     type: "number",
   },
   {
-    txt: ".",
+    val: ".",
     type: "operator",
   },
   {
-    txt: "=",
+    val: "=",
     type: "operator",
   }
 ]
